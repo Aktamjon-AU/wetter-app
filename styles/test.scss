@@ -1,0 +1,45 @@
+@import "__mixins";
+@import "variables";
+@import "detailView";
+@import "spinner";
+@import "main_menu";
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Oi&family=Rubik+Scribble&display=swap");
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  @include largeScreen {
+    background-color: lighten($background, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
+#app {
+  color: $text-color;
+  padding: 1rem;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(0deg, $elevation-2 0%, $background 50%);
+  
+
+  @include largeScreen {
+    width: 400px;
+    height: 900px;
+    overflow: auto;
+    min-height: unset;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+
+
+  &.background-image {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2),  rgba(0, 0, 0, 0.2)), var(--setConditionImage);
+    background-size: cover;
+    background-position: center;
+  }
+}

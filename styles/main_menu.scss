@@ -1,0 +1,143 @@
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+
+  &__header {
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: $text-shadow;
+  }
+
+  &__edit {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: $text-color;
+    font-weight: 700;
+    text-shadow: $text-shadow;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  &__search-bar {
+    width: 100%;
+    position: relative;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: $border-radius;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  &__search-result {
+    position: absolute;
+    z-index: 2;
+    transform: translateZ(100px);
+    left: 0;
+    right: 0;
+    background-color: $elevation;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+
+    .search-result {
+        padding: 0.75rem;
+        border-bottom: $border;
+        cursor: pointer;
+
+        &:last-child {
+            border: none;
+        }
+
+        &:hover {
+            background-color: $elevation-2;
+        }
+
+        &__name {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+    }
+  }
+
+  &__city-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.main-menu-card {
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__delete {
+        display: none;
+        width: 2rem;
+        color: red;
+        cursor: pointer;
+        filter: drop-shadow($text-shadow);
+        
+        &--show {
+            display: block;
+        }
+    }
+
+}
+
+.city {
+  @include card();
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  cursor: pointer;
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    var(--condition-image);
+  background-size: cover;
+  background-position: center;
+  text-shadow: $text-shadow;
+  flex-grow: 1;
+
+  &__name {
+    font-weight: 400;
+    font-size: 1.5rem;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__condition {
+    margin-top: 2rem;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__temp {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: right;
+  }
+
+  &__right-site {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}

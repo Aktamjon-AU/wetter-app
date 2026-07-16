@@ -1,0 +1,50 @@
+@mixin largeScreen {
+  @media screen and (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin card() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: $border-radius;
+  backdrop-filter: blur(50px);
+  box-shadow: $box-shadow;
+}
+
+@mixin cardHeader() {
+    width: 100%;
+    border-bottom: $border;
+    padding-bottom: $card-header-gap;
+    margin-bottom: $card-header-gap;
+    font-size: 1rem;
+}
+
+@mixin cardNext3Days () {
+  margin-top: 2rem;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: $border-radius;
+  backdrop-filter: blur(50px);
+  box-shadow: $box-shadow;
+}
+
+@mixin cardOthers() {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  backdrop-filter: blur(50px);
+  box-shadow: $box-shadow;
+  width: 11.5rem;
+  height: 8rem;
+  gap: 0.4rem;
+  margin-top: 1rem;
+
+}

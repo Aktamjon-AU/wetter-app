@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Oi&family=Rubik+Scribble&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+$font-color: white;
+$font-style: "Inter", sans-serif;
+$border-radius: 6px;
+$background: #252e3a;
+$elevation: #101214;
+$elevation-2: #404547;
+$text-color: #fff;
+$text-shadow: 1px 1px 5px black;
+$box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+$max-height-desktop: 900px;
+$border: 1px solid rgba(255, 255, 255, 0.2);
+$card-header-gap: 1rem;

@@ -1,0 +1,194 @@
+.action-bar {
+  display: flex;
+  justify-content: space-between;
+
+  &__back {
+    width: 2.5rem;
+    filter: drop-shadow($text-shadow);
+    cursor: pointer;
+  }
+
+  &__choosen {
+    width: 2.5rem;
+    filter: drop-shadow($text-shadow);
+    cursor: pointer;
+  }
+}
+
+.current-weather {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: $text-shadow;
+
+  &__location {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__current-temperature {
+    margin: 0.5rem 0;
+    font-size: 4.5rem;
+    font-weight: 200;
+  }
+
+  &__condition {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.today-forecast {
+  margin-top: 2rem;
+  @include card();
+
+  &__conditions {
+    @include cardHeader();
+  }
+
+  &__hours {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    gap: 0.5rem;
+
+    .hourly-forecast {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+
+      &__icons {
+        width: 4rem;
+      }
+    }
+  }
+}
+
+.next3Days {
+  @include cardNext3Days();
+
+  &__title {
+    @include cardHeader();
+  }
+
+  &__days {
+    display: flex;
+    flex-direction: column;
+    gap: $card-header-gap;
+    width: 100%;
+  }
+}
+
+.next3Days-day {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: $card-header-gap;
+  border-bottom: $border;
+  &:last-child {
+    padding: 0;
+    border: none;
+  }
+
+  &__day {
+    width: 2rem;
+  }
+
+  &__icon {
+    width: 2.5rem;
+  }
+}
+
+.cardOtherStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  &__right,
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &__Humidity {
+      @include cardOthers();
+      &__Header {
+        font-weight: 200;
+      }
+
+      &__Stat {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__Sunup {
+      @include cardOthers();
+      &__Header {
+        font-weight: 200;
+      }
+
+      &__Stat {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__Rain {
+      @include cardOthers();
+      &__Header {
+        font-weight: 200;
+      }
+
+      &__Stat {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__Feel {
+      @include cardOthers();
+      &__Header {
+        font-weight: 200;
+      }
+
+      &__Stat {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__Sundown {
+      @include cardOthers();
+      &__Header {
+        font-weight: 200;
+      }
+
+      &__Stat {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__UV {
+      @include cardOthers();
+      &__Header {
+        font-weight: 200;
+      }
+
+      &__Stat {
+        font-weight: 300;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
